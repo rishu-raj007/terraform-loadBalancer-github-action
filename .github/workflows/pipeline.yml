@@ -1,0 +1,19 @@
+on:
+  push:
+    branches:
+      - main
+permissions:
+  id-token: write
+  contents: read
+jobs:
+  terraformInit:
+    runs_on: meraNaukar
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5.0.0
+      - name: Azure Login
+        uses: Azure/login@v2.3.0
+        with:
+          client-id: d44f161b-9674-4946-a7ee-6ffcd61517b4
+          tenant-id: 57c1f0bc-ff3e-4926-8c9d-6db802eff79c
+          subscription-id: 8e31d1d4-7aa9-4b0a-9687-fdca97e1bd8c
