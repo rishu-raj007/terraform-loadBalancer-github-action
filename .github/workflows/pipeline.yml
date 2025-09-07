@@ -6,11 +6,12 @@ permissions:
   id-token: write
   contents: read
 jobs:
-  terraformInit:
-    runs_on: meraNaukar
+  terraform-init-plan:
+    runs-on: meraNaukar
     steps:
       - name: Checkout
         uses: actions/checkout@v5.0.0
+          
       - name: Azure Login
         uses: Azure/login@v2.3.0
         with:
