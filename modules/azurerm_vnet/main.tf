@@ -5,5 +5,10 @@ resource "azurerm_virtual_network" "vnet" {
     location            = each.value.location
     resource_group_name = each.value.resource_group_name
     tags                = each.value.tags
+
+   subnet {
+    name             = each.value.subnet_name
+    address_prefixes = each.value.subnet_address_prefixes
+  }
   
 }
