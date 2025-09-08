@@ -13,6 +13,7 @@ module "nsg" {
   depends_on = [ module.rg ]
     source = "../../modules/azurerm_nsg"
 }
+
 module "nic" {
     depends_on = [ module.rg, module.nsg ]
     source = "../../modules/azurerm_nic"
