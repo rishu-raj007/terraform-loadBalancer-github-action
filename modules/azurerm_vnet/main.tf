@@ -8,7 +8,7 @@ resource "azurerm_virtual_network" "vnet" {
 
    subnet {
     name             = each.value.subnet_name
-    address_prefixes = each.value.subnet_address_prefixes
+    address_prefix = each.value.subnet_address_prefixes[0]
   }
   
 }

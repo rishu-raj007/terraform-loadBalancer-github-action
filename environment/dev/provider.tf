@@ -7,10 +7,10 @@ terraform {
     }
     required_version = ">= 1.0.0"
     backend "azurerm" {
-        resource_group_name  = "tfstate-rg"
-        storage_account_name = "tfstate202410"
-        container_name       = "tfstate"
-        key                  = "terraform.tfstate"
+        resource_group_name  = "rg-test-rishu"
+        storage_account_name = "terraformpipelineclass"
+        container_name       = "container-dksh"
+        key                  = "dev.terraform.tfstate"
       
     }
 }
