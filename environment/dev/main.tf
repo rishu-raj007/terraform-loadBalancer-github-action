@@ -32,8 +32,3 @@ module "nsg_nic_assoc" {
     nsg = var.root_nsg
   
 }
-module "nsg" {
-    depends_on = [ module.rg ]
-    source = "../../modules/azurerm_nsg"
-  
-}
