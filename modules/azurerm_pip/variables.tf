@@ -1,12 +1,12 @@
-# variable "pip_name" {
+variable "pip_name" {
   
-# }
-# variable "location" {
+}
+variable "location" {
   
-# }
-# variable "resource_group_name" {
+}
+variable "resource_group_name" {
   
-# }
-# variable "tags" {
+}
+variable "tags" {
   
-# }
+}
