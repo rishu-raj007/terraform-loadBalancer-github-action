@@ -1,4 +1,4 @@
-resource "azurerm_lb" "example" {
+resource "azurerm_lb" "lb" {
   name                = var.lb_name
   sku                 = "Standard"
   location            = var.location
@@ -9,4 +9,9 @@ resource "azurerm_lb" "example" {
     name                 = "PublicIPAddress"
     public_ip_address_id = azurerm_public_ip.example.id
   }
+}
+
+resource "azurerm_lb_backend_address_pool" "lb_pool" {
+  loadbalancer_id = azurerm_lb.lb.id
+  name            = "BackEndAddressPool"
 }
