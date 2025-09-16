@@ -7,7 +7,7 @@ resource "azurerm_lb" "lb" {
 
   frontend_ip_configuration {
     name                 = "PublicIPAddress"
-    public_ip_address_id = azurerm_public_ip.lb.id
+    public_ip_address_id = data.azurerm_public_ip.pip.id
   }
 }
 
