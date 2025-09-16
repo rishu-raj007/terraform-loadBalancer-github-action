@@ -10,3 +10,6 @@ variable "location" {
 variable "tags" {
   
 }
+variable "public_ip_name" {
+  
+}
