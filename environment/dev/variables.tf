@@ -16,6 +16,3 @@ variable "root_linux_vm" {
 variable "root_nic" {
   
 }
-variable "root_nsg" {
-  
-}
