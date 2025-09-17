@@ -25,7 +25,6 @@ module "linux_vm" {
     source = "../../modules/azurerm_linux_vm"
     linux_vm = var.root_linux_vm
 }
-
 module "nsg_nic_assoc" {
   depends_on = [ module.rg, module.nic, module.nsg, module.linux_vm ]
     source = "../../modules/azurerm_nsg_nic_assoc"
