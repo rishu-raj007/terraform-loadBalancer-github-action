@@ -12,6 +12,14 @@ module "vnetSubnet" {
 module "nsg" {
   depends_on = [ module.rg ]
     source = "../../modules/azurerm_nsg"
+    nsg_name = "nsg-dev-01"
+    location = "East US"
+    resource_group_name = "rg-dev-01"
+    tags = {
+      environment = "dev"
+      owner       = "g4"
+      use_case    = "loadbalancer"
+    }
 }
 
 module "nic" {
