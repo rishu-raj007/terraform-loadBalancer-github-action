@@ -63,14 +63,4 @@
   }
   
   }
-  root_nsg = {
-  nsg1 = {
-    nsg_name            = "nsg-dev-01"
-    resource_group_name = "rg-dev-01"
-    location            = "East US"
-    tags = {
-      environment = "dev"
-      owner       = "g4"
-      use_case    = "loadbalancer"
-    }
-  }}
+  
