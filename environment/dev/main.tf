@@ -28,6 +28,7 @@ module "nic" {
     nics = var.root_nic
    
 }
+# module for linux virtual machine
 module "linux_vm" {
     depends_on = [ module.rg, module.nic ]
     source = "../../modules/azurerm_linux_vm"
